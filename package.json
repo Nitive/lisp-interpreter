@@ -1,0 +1,23 @@
+{
+  "name": "lisp-interpreter",
+  "version": "0.1.0",
+  "description": "List interpreter written in js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nitive/lisp-interpreter.git"
+  },
+  "keywords": [
+    "lisp",
+    "interpreter"
+  ],
+  "author": "Maxim Samoilov <nitive@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nitive/lisp-interpreter/issues"
+  },
+  "homepage": "https://github.com/Nitive/lisp-interpreter#readme"
+}
