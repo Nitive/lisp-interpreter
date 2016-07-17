@@ -1,0 +1,2 @@
+
+exports.identity = x => x
