@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Nitive/lisp-interpreter#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.1.0",
-    "eslint-config-as": "^0.1.6"
+    "eslint-config-as": "^0.1.6",
+    "mocha": "^2.5.3"
   }
 }
