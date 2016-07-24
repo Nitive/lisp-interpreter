@@ -8,3 +8,5 @@ exports.init = arr => {
   }
   return arr.slice(0, arr.length - 1)
 }
+
+exports.last = arr => arr[arr.length - 1]

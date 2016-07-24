@@ -20,4 +20,9 @@ describe('utils', () => {
   it('#identity', () => {
     expect(U.identity(1)).equal(1)
   })
+
+  it('#last', () => {
+    expect(U.last([1, 2])).equal(2)
+    expect(U.last([])).equal(undefined)
+  })
 })
