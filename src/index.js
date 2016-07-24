@@ -16,7 +16,6 @@ const isNumber = x => /\d+/.test(x)
 
 // buildAstFromToken :: String -> Ast
 const buildAstFromToken = token => {
-  console.log(token)
   if (isNumber(token)) {
     return {
       type: 'number',

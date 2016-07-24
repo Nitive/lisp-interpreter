@@ -1,7 +1,7 @@
 
 exports.identity = x => x
 
-exports.head = arr => arr.slice(0)
+exports.head = arr => arr[0]
 exports.init = arr => {
   if (arr.length === 0) {
     throw new Error('Array can\'t be empty')
