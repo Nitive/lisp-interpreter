@@ -16,4 +16,8 @@ describe('utils', () => {
     expect(U.head([1, 2])).equal(1)
     expect(U.head([])).equal(undefined)
   })
+
+  it('#identity', () => {
+    expect(U.identity(1)).equal(1)
+  })
 })
