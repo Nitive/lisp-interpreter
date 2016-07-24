@@ -1,4 +1,5 @@
 const U = require('./utils')
+const { wrapBracketsInArray } = require('../src/parse-utils.js')
 
 // tokens: '(', ')', identifier, string, number
 
@@ -23,24 +24,23 @@ const buildAstFromToken = token => {
     }
   }
 
-  throw new Error('wrong token')
+  throw new Error(`wrong token ${token}`)
 }
 
 
-// buildAstFromArgs :: [String] -> [Ast]
-const buildAstFromArgs = tokens => {
-  return tokens.map(buildAstFromToken)
-}
-
-// buildAstFromTokens :: [String] -> Ast
+// buildAstFromTokens :: [Token] | Token -> Ast
 const buildAstFromTokens = tokens => {
+  if (!Array.isArray(tokens)) {
+    return buildAstFromToken(tokens)
+  }
+
   if (tokens[0] === '(') {
     const func = tokens[1]
-    const argsTokens = U.init(tokens.slice(2))
-    return [{
+    const argsTokens = wrapBracketsInArray(tokens.slice(2, -1))
+    return {
       func,
-      args: buildAstFromArgs(argsTokens),
-    }]
+      args: argsTokens.map(buildAstFromTokens),
+    }
   }
 
   throw new Error('Program should start with (')
