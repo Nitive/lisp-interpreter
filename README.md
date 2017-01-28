@@ -1,6 +1,8 @@
 Lisp interpreter
 ===
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Nitive/lisp-interpreter.svg)](https://greenkeeper.io/)
+
 Simple lisp interpreter written in JS
 
 ```clojure
